@@ -17,12 +17,13 @@ router.get('/:id', async (req, res)=>{
 
 //create tasks
 router.post('/', async (req, res)=>{
+    console.log(req);
     const {title, description}=req.body;
     const task = new Task({title, description});
     await task.save();
     res.json({status: 'task created'});    
 })
-
+//update task
 router.put('/:id', async (req, res) => {
     const {title, description}= req.body;
     const newTask={title, description};

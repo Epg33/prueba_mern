@@ -4,7 +4,7 @@ const morgan = require("morgan");
 
 const mongoose = require('./database');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 const app = Express();
 
 //middelwares
